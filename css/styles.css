@@ -196,6 +196,7 @@ HEADER
 .skills {
   background: var(--clr-grey-10);
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   padding: 0 3px;
 }
@@ -204,7 +205,24 @@ HEADER
   padding: 2.5rem 0;
   text-align: center;
   transition: var(--transition);
-  width: 25%;
+  width: 100%;
+}
+
+@media screen and (min-width: 700px) {
+  .skills {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .skill {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .skill {
+    width: 25%;
+  }
 }
 
 .skill:hover {
