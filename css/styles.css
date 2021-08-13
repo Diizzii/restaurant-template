@@ -3,9 +3,25 @@ FONTS
 ***/
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+
+/***
+VARIABLES
+***/
+
+:root {
+  --clr-primary: #678e3b;
+  --clr-primary-light: #beed8a;
+  --clr-grey-1: #102a41;
+  --clr-grey-5: #617d97;
+  --clr-grey-10: #10f1f5f9
+  --clr-white: #fff;
+  --ff-primary: 'Noto Sans JP', sans-serif;
+  --ff-secondary: 'Style Script', cursive;
+  --transition: all 0.3s linear;
+}
 
 * {
-  font-family: 'Noto Sans JP', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
