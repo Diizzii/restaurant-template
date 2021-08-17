@@ -234,19 +234,6 @@ HEADER
   width: 100%;
 }
 
-@media screen and (min-width: 769px) {
-  .skill {
-    float: left;
-    width: 50%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .skill {
-    width: 25%;
-  }
-}
-
 .skill:hover {
   background: var(--clr-grey-10);
   box-shadow: 2px 2px var(--clr-primary);
@@ -268,6 +255,23 @@ HEADER
   color: var(--clr-grey-5);
   max-width: 17rem;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 769px) {
+  .skill {
+    float: left;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .skill {
+    width: 25%;
+  }
+  .skills {
+    width: 68%;
+    margin: 0 auto;
+  }
 }
 
 /* ABOUT SECTION */
@@ -329,6 +333,7 @@ HEADER
 .product {
   width: 74%;
   margin: 2rem auto;
+  text-align: center;
 }
 
 .product-text {
@@ -379,7 +384,13 @@ HEADER
 
 .services {
   background-color: var(--clr-grey-10);
-  padding: 2rem;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.services-container {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .services-title,
@@ -390,9 +401,23 @@ HEADER
 }
 
 .service-card {
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   background-color: var(--clr-white);
-  text-align: center;
+  border-radius: var(--radius);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition: var(--transition);
+  transform: scale(1.05);
+}
+
+.service-image {
+  height: 17rem;
+  object-fit: cover;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
 }
 
 .service-info {
@@ -402,21 +427,30 @@ HEADER
 .service-icon {
   position: relative;
   bottom: 1em;
+  border: 3px solid var(--clr-primary);
+  border-radius: 50%;
+  padding: 0.4rem;
+  background-color: var(--clr-white);
+  text-align: center;
 }
 
 .service-icon i {
   transform: scale(1.5);
+  color: var(--clr-primary);
 }
 
 @media screen and (min-width: 1200px) {
   .services-title {
-    width: 71%;
-    padding-left: 0;
+    width: 90%;
+    padding-left: 2rem;
   }
 
   .service-card {
     float: left;
     margin-right: 1rem;
-    width: 30%;
+    margin-bottom: 3rem;
+    width: 31%;
   }
 }
+
+/* CONTACT */
