@@ -170,9 +170,18 @@ GLOBAL STYLES: BIG SCREEN ONLY
   }
 }
 
-/***
-HEADER
-***/
+/* NAVBAR */
+
+.nav-btn {
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  font-size: 3rem;
+  color: var(--clr-primary);
+  z-index: 1;
+}
+
+/* HEADER */
 
 .header {
   min-height: 100vh;
