@@ -170,6 +170,72 @@ GLOBAL STYLES: BIG SCREEN ONLY
     padding: 4rem 1rem;
   }
 }
+/* ANIMATION */
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-200px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(50px);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(200px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(-50px);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes show {
+  0% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 
 /* NAV BUTTON */
 
@@ -180,6 +246,9 @@ GLOBAL STYLES: BIG SCREEN ONLY
   font-size: 3rem;
   color: var(--clr-primary);
   z-index: 1;
+  cursor: pointer;
+  /* ANIMATION */
+  animation: bounce 2s ease infinite;
 }
 
 /* NAVBAR */
@@ -275,6 +344,7 @@ GLOBAL STYLES: BIG SCREEN ONLY
   font-family: var(--ff-secondary);
   color: var(--clr-primary-light);
   /* ANIMATION */
+  animation: slideFromRight 5s ease-in-out 1;
 }
 
 .banner h1 {
@@ -283,6 +353,7 @@ GLOBAL STYLES: BIG SCREEN ONLY
   margin-top: 1.5rem;
   margin-bottom: 3rem;
   /* ANIMATION */
+  animation: slideFromLeft 5s ease-in-out 1;
 }
 
 .banner-btn {
@@ -290,6 +361,8 @@ GLOBAL STYLES: BIG SCREEN ONLY
   outline-offset: 0.25rem;
   font-size: 1.25rem;
   padding: 1rem 1.75rem;
+  /* ANIMATION */
+  animation: show 5s ease-in-out 1;
 }
 
 /* CONTENT DIVIDER */
