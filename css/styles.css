@@ -170,7 +170,7 @@ GLOBAL STYLES: BIG SCREEN ONLY
   }
 }
 
-/* NAVBAR */
+/* NAV BUTTON */
 
 .nav-btn {
   position: fixed;
@@ -180,6 +180,8 @@ GLOBAL STYLES: BIG SCREEN ONLY
   color: var(--clr-primary);
   z-index: 1;
 }
+
+/* NAVBAR */
 
 /* HEADER */
 
