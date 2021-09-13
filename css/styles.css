@@ -97,7 +97,8 @@ textarea {
   display: inline-block;
   font-weight: 700;
   transition: var(--transition);
-  font-size: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: bold;
   border: none;
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
@@ -105,7 +106,9 @@ textarea {
 
 .btn:hover {
   color: var(--clr-primary);
-  background: var(--clr-primary-light);
+  background: var(--clr-white);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
 }
 
 .clearfix::after,
@@ -164,12 +167,11 @@ GLOBAL STYLES: BIG SCREEN ONLY
   }
 }
 
-@media screen and (min-width: 992px) {
-  .section-center {
-    width: 95vw;
-    padding: 4rem 1rem;
-  }
+.section-center {
+  width: 80%;
+  margin: auto;
 }
+
 /* ANIMATION */
 
 @keyframes bounce {
@@ -380,20 +382,27 @@ GLOBAL STYLES: BIG SCREEN ONLY
 
 /* SKILLS SECTION */
 
-.skills {
-  padding: 0 2px 0 0;
-}
-
 .skill {
-  padding: 2.5rem 0;
+  padding: 1rem;
   text-align: center;
   transition: var(--transition);
-  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.5rem;
+  min-height: 8rem;
+}
+
+.skill-head {
+  height: 50%;
+  margin-bottom: 1rem;
+}
+
+.skill-title {
+  line-height: 1.5rem;
 }
 
 .skill:hover {
   background: var(--clr-grey-10);
-  box-shadow: 2px 2px var(--clr-primary);
 }
 
 .skill:hover .skill-icon {
@@ -414,33 +423,45 @@ GLOBAL STYLES: BIG SCREEN ONLY
   margin: 0 auto;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 800px) {
+  .skills-center {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 50vh;
+    gap: 1rem;
+    margin-bottom: 0;
+  }
+
   .skill {
-    float: left;
-    width: 50%;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .skill {
-    width: 25%;
-  }
-  .skills {
-    width: 68%;
-    margin: 0 auto;
+  .skills-center {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
   }
 }
 
 /* ABOUT SECTION */
 
+.about-center {
+  padding: 3rem 0;
+  text-align: center;
+}
+
 .about {
   background-color: var(--clr-grey-10);
+  margin: 0;
 }
 
 .about-picture-container {
   background-color: var(--clr-primary);
   border: 0.5rem solid var(--clr-primary);
-  max-width: 30rem;
   overflow: hidden;
 }
 
@@ -454,23 +475,24 @@ GLOBAL STYLES: BIG SCREEN ONLY
 }
 
 .about-text {
-  max-width: 26rem;
   color: var(--clr-grey-5);
 }
 
-.about-img,
-.about-info {
-  padding: 2rem;
-  width: 90%;
-  margin: 0 auto;
+@media screen and (max-width: 991px) {
+  .about-picture-container {
+    margin-bottom: 2rem;
+  }
 }
 
 @media screen and (min-width: 992px) {
-  .about-img,
-  .about-info {
-    padding: 2rem 0;
-    float: left;
-    width: 50%;
+  .about-center {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    place-items: center;
+  }
+  .about-btn {
+    margin-top: 1.5rem;
   }
 }
 
@@ -480,60 +502,70 @@ GLOBAL STYLES: BIG SCREEN ONLY
   margin: 0 auto;
 }
 
-.product-info,
-.product-inventory {
-  padding: 2rem;
-  width: 90%;
-  margin: 0 auto;
+.products-center {
+  text-align: center;
 }
 
 .product {
-  width: 74%;
   margin: 2rem auto;
-  text-align: center;
+  border-top-right-radius: var(--radius);
+  border-top-left-radius: var(--radius);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product:hover {
+  transform: scale(1.05);
+  transition: var(--transition-slow);
+}
+
+.products-btn {
+  margin: 1.5rem auto;
+}
+
+.product-img {
+  border-top-right-radius: var(--radius);
+  border-top-left-radius: var(--radius);
+  height: 17rem;
+  object-fit: cover;
+  border-bottom: solid 2px var(--clr-grey-10);
 }
 
 .product-text {
   color: var(--clr-grey-5);
-  max-width: 26rem;
-}
-
-.product-img {
-  border-radius: var(--radius);
-  margin-bottom: 1rem;
-  height: 17rem;
-  object-fit: cover;
+  max-width: 20rem;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1rem;
 }
 
 .product-price {
   color: var(--clr-primary);
 }
 
-@media screen and (min-width: 768px) {
-  .product {
-    float: left;
-    width: 45%;
-    margin: 0 0.5rem;
-  }
-
-  .product-info,
+@media screen and (min-width: 800px) {
   .product-inventory {
-    float: left;
-    width: 50%;
-    padding: 0;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    place-items: center;
+  }
+  .product {
+    height: 23rem;
+    margin: 0;
+    padding-bottom: 1.5rem;
+  }
+  .product-title {
+    line-height: 1.5rem;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .product {
-    width: 29%;
-  }
-  .product-info {
-    width: 30%;
-  }
   .product-inventory {
-    width: 70%;
-    padding: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .product {
+    height: 23rem;
   }
 }
 
