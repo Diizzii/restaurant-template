@@ -106,7 +106,7 @@ textarea {
 
 .btn:hover {
   color: var(--clr-primary);
-  background: var(--clr-white);
+  background: var(--clr-primary-light);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   transform: scale(1.05);
 }
@@ -532,7 +532,7 @@ GLOBAL STYLES: BIG SCREEN ONLY
 
 .product-text {
   color: var(--clr-grey-5);
-  max-width: 20rem;
+  max-width: 45rem;
   margin: 0 auto;
   text-align: center;
   padding: 1rem;
@@ -573,26 +573,19 @@ GLOBAL STYLES: BIG SCREEN ONLY
 
 .services {
   background-color: var(--clr-grey-10);
-  padding-top: 2rem;
+  padding-top: 1rem;
   text-align: center;
 }
 
-.services-container {
-  width: 80%;
-  margin: 0 auto;
-}
-
-.services-title,
 .services-list {
-  width: 90%;
-  margin: 0 auto;
-  padding: 1.2rem;
+  margin-top: 3rem;
 }
 
 .service-card {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   background-color: var(--clr-white);
-  border-radius: var(--radius);
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -632,20 +625,28 @@ GLOBAL STYLES: BIG SCREEN ONLY
   color: var(--clr-primary);
 }
 
-@media screen and (min-width: 1200px) {
-  .services-title {
-    width: 90%;
-    padding-left: 2rem;
+.service-btn {
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 992px) {
+  .services-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    place-items: center;
   }
 
   .service-card {
-    float: left;
-    margin-right: 1rem;
-    margin-bottom: 3rem;
-    width: 31%;
+    margin-bottom: 0;
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .services-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 /* CONTACT */
 
 .contact {
