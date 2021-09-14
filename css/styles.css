@@ -754,7 +754,7 @@ GLOBAL STYLES: BIG SCREEN ONLY
 .footer {
   width: 100%;
   margin: 0;
-  height: 6rem;
+  height: 8rem;
   background-color: var(--clr-grey-1);
   color: var(--clr-white);
   padding: 0.5rem;
@@ -762,7 +762,7 @@ GLOBAL STYLES: BIG SCREEN ONLY
 
 .footer-icons,
 .footer-text {
-  width: 80%;
+  width: 95%;
   margin: 0.5rem auto;
   text-align: center;
 }
