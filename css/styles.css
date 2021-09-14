@@ -683,6 +683,11 @@ GLOBAL STYLES: BIG SCREEN ONLY
   margin-bottom: 0;
 }
 
+#contact-email,
+#contact-phone {
+  color: var(--clr-grey-5) !important;
+}
+
 .contact-form {
   margin-top: 3rem;
   background-color: var(--clr-grey-10);
