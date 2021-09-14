@@ -679,7 +679,7 @@ GLOBAL STYLES: BIG SCREEN ONLY
 
 .contact-text {
   line-height: 1.5rem;
-  color: var(--clr-grey-5);
+  color: var(--clr-grey-5) !important;
   margin-bottom: 0;
 }
 
