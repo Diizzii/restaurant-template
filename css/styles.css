@@ -335,11 +335,18 @@ GLOBAL STYLES: BIG SCREEN ONLY
 
 .header {
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url('../images/main.jpg') center/cover no-repeat fixed;
   position: relative;
   /* ANIMATION */
   overflow-x: hidden;
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    background: none;
+    background-color: var(--clr-grey-5);
+  }
 }
 
 .banner {
