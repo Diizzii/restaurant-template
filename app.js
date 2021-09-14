@@ -8,6 +8,7 @@ navBtn.addEventListener('click', () => {
 })
 // close nav
 navClose.addEventListener('click', () => {
+  console.log('navclose clicked')
   navbar.classList.remove('show-nav')
 })
 //setup date
